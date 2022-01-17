@@ -1,0 +1,137 @@
+html {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+}
+
+a:active, a:hover, a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
+.nav_bar {
+    position: fixed;
+    background-color: white;
+    text-align: center;
+    bottom: 0;
+    border-top: 1px solid rgba(69, 69, 69, 0.6);
+    width: 100%;
+    padding: 8px 0 8px 0;
+    margin: 0;
+}
+
+.nav_bar li {
+    position: relative;
+    width: calc((100% - 20px) / 5);
+    display: inline-block;
+    text-align: center;
+}
+
+.nav_bar_option {
+    display: inline-block;
+}
+
+.account_icon {
+    top: 1px;
+}
+
+
+.phantom_nav_bar {
+    height: 50px;
+}
+
+.top_image {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom: 2px solid rgba(255, 138, 92, 1);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(resources/tile_bg_3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.name {
+    font-size: 24px;
+    position: relative;
+    color: white;
+    bottom: 0px;
+    margin: 0px;
+    padding: 16px;
+    padding-top: calc(30% + 36px);
+}
+
+.about {
+    position: relative;
+    top: 30%;
+    margin: 16px;
+}
+
+/* .section {
+    margin: 0;
+    padding: 4px 18px 4px 18px;
+    background-color: rgba(255, 138, 92, 1);
+    border-radius: 16px;
+    font-size: 14px;
+} */
+
+.data {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.type, .date, .address, .price, .conditions, .is_open {
+    display: block;
+    position: relative;
+    margin: 16px;
+}
+
+.content {
+    display: flex;
+}
+
+.content > div {
+    margin: 16px;
+    display: block;
+}
+
+.date {
+    margin-bottom: 0px;
+    border-radius: 2px
+}
+
+.address {
+    margin-top: 0px;
+}
+
+.clock {
+    display: inline-flex;
+    flex: right;
+    margin: 8px;
+    margin-top: 16px;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.date_data {
+    margin: 4px;
+    margin-top: 2px;
+    margin-left: 0px;
+}
+
+.time_data {
+    margin: 0px;
+}

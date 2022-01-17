@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="../static/styles_new_event.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto&display=swap" rel="stylesheet">
+
+        <title></title>
+    </head>
+    <body>
+        <form action="new_event" method="POST" id="main_form">
+            <div class="name">
+                <b class="about_name section">Название мероприятия</b>
+                <input class="data" name="name" autocomplete="off">
+            </div>
+            <div class="type">
+                <b class="category section">Выберите категорию</b>
+                <script>
+                    function set_type(type) {
+                        form = document.getElementById("main_form");
+                        form.type_input.value = type;
+                    }
+                </script>
+                <input type="hidden" name="type_input" value="">
+                <div class="buttons">
+                    <button class="data" type="button" onclick="set_type('Учёба');">Учёба</button>
+                    <button class="data" type="button" onclick="set_type('Бар/Клуб');">Бар/Клуб</button>
+                    <button class="data" type="button" onclick="set_type('Культура');">Культура</button>
+                    <button class="data" type="button" onclick="set_type('Кино');">Кино</button>
+                    <button class="data" type="button" onclick="set_type('Домашние');">Домашние</button>
+                    <button class="data" type="button" onclick="set_type('Прогулка');">Прогулка</button>
+                    <button class="data" type="button" onclick="set_type('Спорт');">Спорт</button>
+                    <button class="data" type="button" onclick="set_type('Праздник');">Праздник</button>
+                </div>
+            </div>
+            <div class="about">
+                <b class="about_name section">Описание</b>
+                <textarea class="data about_data" type="text" autocomplete="off" name="about" onchange="update_about_data();"></textarea>
+            </div>
+            
+            <div class="date">
+                <b class="section">Дата и время</b>
+                <div class="content">
+                    <img src="static/resources/clock_64.png" class="clock">
+                    <div>
+                        <div class="data date_data"><input class="data date_input" type="date" autocomplete="off" name="date_input"></div>
+                        <div class="data time_data"><input class="data time_input" type="time" autocomplete="off" name="time_input"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="address">
+                <b class="section">Адрес мероприятия</b>
+                <input class="data" autocomplete="off" name="address_input">
+            </div>
+            <div class="price">
+                <b class="section">Стоимость</b>
+                <input class="data" type="number" min="0" name="price_input">
+            </div>
+            <div class="conditions">
+                <b class="section">Условия участия</b>
+                <textarea class="data" autocomplete="off" name="conditions_input"></textarea></textarea>
+            </div>
+            <div class="is_open">
+                <b class="section">Закрытое/открытое мероприятие</b>
+                <script>
+                    function set_visibility(option) {
+                        form = document.getElementById("main_form");
+                        form.visibility_input.value = option;
+                    }
+                </script>
+                <input type="hidden" name="visibility_input" value="">
+                <div class="visib_choice">
+                    <div class="vis">
+                        <input class="data" autocomplete="off" name="visibility" type="radio" id="vis_op" onclick="set_visibility('Yes')"><label for="vis_op">Открытое</label>
+                    </div>
+                    <div class="vis">
+                        <input class="data" autocomplete="off" name="visibility" type="radio" id="vis_cl" onclick="set_visibility('No')"><label for="vis_cl">Закрытое</label>
+                    </div>
+                </div>
+            </div>
+            <div class="submit_form"><button class="submit" type="submit">Создать</button></div>
+        </form>
+        <div class="phantom_nav_bar"></div>
+        <ul class="nav_bar">
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/home.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/map.png" alt=""></li></a>
+            <a href="new_event"><li class="nav_bar_option"><img src="static/resources/plus_active.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/chat.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option account_icon"><img src="static/resources/account.png" alt=""></li></a>
+        </ul>
+    </body>
+</html>

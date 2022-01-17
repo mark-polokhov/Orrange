@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #blink1 {
+          -webkit-animation: blink 3s linear infinite !important;
+          animation: blink1 3s linear infinite !important;
+        }
+        @-webkit-keyframes blink {
+          0% { color: rgba(34, 34, 34, 1) !important; }
+          50% { color: rgba(34, 34, 34, 0) !important; }
+          100% { color: rgba(34, 34, 34, 1) !important; }
+        }
+        @keyframes blink {
+          0% { color: rgba(34, 34, 34, 1) !important; }
+          50% { color: rgba(34, 34, 34, 0) !important; }
+          100% { color: rgba(34, 34, 34, 1) !important; }
+        }
+    </style>
+
+    <title>Wikipedia with Places Recognition</title>
+</head>
+<body class="text-center" style="line-height: 1;">
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">Wikipedia and Places Recognition</a>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            </ul>
+              <svg id="loading" style="margin-right: 12px; display: none" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="38px" height="38px"
+                   viewBox="0 0 128 128" xml:space="preserve"><g><circle cx="16" cy="64" r="16" fill="#198754"/>
+                  <circle cx="16" cy="64" r="14.344" fill="#198754" transform="rotate(45 64 64)"/>
+                  <circle cx="16" cy="64" r="12.531" fill="#198754" transform="rotate(90 64 64)"/>
+                  <circle cx="16" cy="64" r="10.75" fill="#198754" transform="rotate(135 64 64)"/>
+                  <circle cx="16" cy="64" r="10.063" fill="#198754" transform="rotate(180 64 64)"/>
+                  <circle cx="16" cy="64" r="8.063" fill="#198754" transform="rotate(225 64 64)"/>
+                  <circle cx="16" cy="64" r="6.438" fill="#198754" transform="rotate(270 64 64)"/>
+                  <circle cx="16" cy="64" r="5.375" fill="#198754" transform="rotate(315 64 64)"/>
+                  <animateTransform attributeName="transform" type="rotate"
+                    values="0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64"
+                    calcMode="discrete" dur="800ms" repeatCount="indefinite"></animateTransform></g></svg>
+            <form class="d-flex" action="data" method="POST">
+              <input class="form-control me-2" type="text" placeholder="Wikipedia URL" aria-label="Search" name="wiki_page_url">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class='wiki_page' width="100%" height="100vh" name="Page"
+         style="position: relative;height: calc(100vh - 56px);display: flex;
+         align-items: center;justify-content: center;align-content: center;color: #6c757d;">
+        <h2 class="font-weight-normal text-black-50">Please, enter the URL of the Wikipedia page in the search bar</h2>
+    </div>
+    <script>
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            document.getElementById('loading').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../static/styles_main.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+
+        <title>Orrange</title>
+    </head>
+    <body>
+        <form class="search_bar_main">
+            <img src="static/resources/loupe.png">
+            <input class="search_input" type="search" name="text" placeholder="Поиск мероприятий" value="" autocomplete="off">
+        </form>
+        <div class="types_bar_main">
+            <ul class="types_bar_holder">
+                <a href="main"><li class="types_bar_option"><img src="static/resources/study.png" style="top: 6px;"><p class="types_bar_name">Учёба</p></li></a>
+                <a href="main"><li class="types_bar_option"><img src="static/resources/entertain.png" style="top: 6px;"><p class="types_bar_name">Культура</p></li></a>
+                <a href="main"><li class="types_bar_option"><img src="static/resources/party.png" alt=""><p class="types_bar_name">Бар/Клуб</p></li></a>
+                <a href="main"><li class="types_bar_option"><img src="static/resources/edu.png" style="top: 6px;"><p class="types_bar_name">ВШЭ</p></li></a>
+            </ul>
+        </div>
+        <div class="tiles_main">
+            <h3>Ближайшие мероприятия</h3>
+
+            {% for index in range(size) %}
+            <form href="info" method="POST" class="tile_ref" id="{{tiles_list[index]['ID']}}" onclick="update('{{tiles_list[index]['ID']}}'); return false;">
+                <script>
+                    function update(ID) {
+                        form = document.getElementById(ID);
+                        form.caller.value = ID;
+                        form.submit();
+                    }
+                </script>
+                <input type="hidden" name="caller" value="">
+                <div class="tile tile_{{tiles_list[0]['ID']}}">
+                    <p class="tile_date">{{tiles_list[index]['Date']}}</p>
+                    <p class="tile_name">{{tiles_list[index]['Name']}}</p>
+                    <p class="tile_type">{{tiles_list[index]['Type']}}</p>
+                    <p class="tile_more">Подробности <img src="static/resources/right_arrow.png" alt=""></i></p>
+                </div>
+            </form>
+            {% endfor %}
+            <div class="phantom_nav_bar"></div>
+        </div>
+        
+
+        <ul class="nav_bar">
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/home_active.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/map.png" alt=""></li></a>
+            <a href="new_event"><li class="nav_bar_option"><img src="static/resources/plus.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option"><img src="static/resources/chat.png" alt=""></li></a>
+            <a href="main"><li class="nav_bar_option account_icon"><img src="static/resources/account.png" alt=""></li></a>
+        </ul>
+    </body>
+</html>

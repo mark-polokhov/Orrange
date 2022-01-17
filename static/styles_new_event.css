@@ -1,0 +1,179 @@
+html {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+}
+
+a:active, a:hover, a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
+.nav_bar {
+    position: fixed;
+    background-color: white;
+    text-align: center;
+    bottom: 0;
+    border-top: 1px solid rgba(69, 69, 69, 0.6);
+    width: 100%;
+    padding: 8px 0 8px 0;
+    margin: 0;
+}
+
+.nav_bar li {
+    position: relative;
+    width: calc((100% - 20px) / 5);
+    display: inline-block;
+    text-align: center;
+}
+
+.nav_bar_option {
+    display: inline-block;
+}
+
+.account_icon {
+    top: 1px;
+}
+
+
+.phantom_nav_bar {
+    height: 50px;
+}
+
+.data {
+    display: block;
+    font-size: 14px;
+    margin: 8px;
+    margin-left: 0px;
+}
+
+.name, .about, .type, .date, .address, .price, .conditions, .is_open, .submit_form {
+    display: grid;
+    position: relative;
+    margin: 16px;
+    margin-left: 24px;
+}
+
+.content {
+    display: flex;
+}
+
+.content > div {
+    margin: 8px;
+    display: block;
+}
+
+.clock {
+    display: inline-flex;
+    flex: right;
+    margin: 8px;
+    margin-top: 24px;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.date_data {
+    margin: 4px;
+    margin-top: 2px;
+    margin-left: 0px;
+}
+
+.time_data {
+    margin: 0px;
+}
+
+
+input {
+    margin: 0px;
+    border: none;
+    outline: none;
+    background-color: rgba(196, 196, 196, 0);
+    border-radius: 8px;
+    border: 2px solid #3686E3;
+    padding: 6px;
+    font-family: Raleway, sans-serif;
+    font-size: 12px;
+}
+
+button {
+    position: relative;
+    margin: 0px;
+    border: none;
+    outline: none;
+    background-color: #3686E3;
+    border-radius: 8px;
+    border: 2px solid #3686E3;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: white;
+}
+
+.buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+textarea {
+    margin: 0px !important;
+    margin-right: 8px !important;
+    height: 48px;
+    border: none;
+    outline: none;
+    background-color: rgba(196, 196, 196, 0);
+    border-radius: 8px;
+    border: 2px solid #3686E3;
+    padding: 6px;
+    font-family: Raleway, sans-serif;
+    font-size: 12px;
+}
+
+.price > input {
+    width: 20%;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.date_input, .time_input {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.visib_choice {
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.vis {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.submit_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+    margin-top: 0px;
+}
+
+.submit {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}

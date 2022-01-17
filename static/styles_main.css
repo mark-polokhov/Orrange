@@ -1,0 +1,203 @@
+html {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+}
+
+a:active, a:hover, a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_bar {
+    position: fixed;
+    background-color: white;
+    text-align: center;
+    bottom: 0;
+    border-top: 1px solid rgba(69, 69, 69, 0.6);
+    width: 100%;
+    padding: 8px 0 8px 0;
+    margin: 0;
+}
+
+.nav_bar li {
+    position: relative;
+    width: calc((100% - 20px) / 5);
+    display: inline-block;
+    text-align: center;
+}
+
+.nav_bar_option {
+    display: inline-block;
+}
+
+.account_icon {
+    top: 1px;
+}
+
+.phantom_nav_bar {
+    height: 56px;
+}
+
+.search_bar_main {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+    padding: 8px;
+}
+
+.search_bar_main {
+    display: flex;
+    background-color: rgba(196, 196, 196, 0.5);
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 8px;
+    min-width: 248px;
+    width: calc(80% - 16px);
+}
+
+.search_input {
+    margin: 0px;
+    margin-left: 8px;
+    border: none;
+    outline: none;
+    float: left;
+    background-color: rgba(196, 196, 196, 0);
+    font-size: 12px;
+    width: 100%;
+}
+
+.s_icon {
+    padding-right: 8px;
+}
+
+.types_bar_holder {
+    position: absolute;
+    text-align: center;
+    top: 44px;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    margin: 0;
+}
+
+.types_bar_holder li {
+    position: relative;
+    width: calc(100% / 5);
+    display: inline-block;
+    text-align: left;
+    border-radius: 8px;
+    margin: 6px;
+    padding: 8px;
+    min-width: 58px;
+    width: calc(52px + (100% - 4 * 58px - 6 * 8px) / 16);
+    height: 58px;
+    background-color: rgba(196, 196, 196, 0.5);
+    font-size: 12px;
+    border: 2px solid #3686E3;
+}
+
+.types_bar_name {
+    position: absolute;
+    bottom: 0px;
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.types_bar_holder img {
+    position: absolute;
+    top: 0px;
+}
+
+.tiles_main {
+    position: absolute;
+    top: 146px;
+    width: 100%;
+    height: calc(100% - 197px);
+    justify-content: center;
+}
+
+.tiles_main h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.tile {
+    position: relative;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(resources/tile_bg_3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    border: 2px solid #3686E3;
+    min-width: 248px;
+    width: 80%;
+    height: 142px;
+}
+
+.tile_date {
+    position: absolute;
+    font-size: 12px;
+    top: -18px;
+    left: 2px;
+    margin: 0;
+}
+
+.tile_name {
+    position: absolute;
+    margin: 0;
+    padding: 4px 18px 4px 18px;
+    background-color: rgba(255, 138, 92, 1);
+    border-radius: 10px;
+    font-size: 12px;
+    top: 10px;
+    left: 14px;
+}
+
+.tile_type {
+    position: absolute;
+    bottom: 8px;
+    left: 28px;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: white;
+}
+
+.tile_more {
+    position: absolute;
+    bottom: 8px;
+    right: 14px;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: white;
+}
+
